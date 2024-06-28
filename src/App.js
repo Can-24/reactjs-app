@@ -11,7 +11,7 @@ function App() {
 //useState-Hook zur Verwaltung der Daten, die von der API abgerufen werden. Initialer Zustand ist ein leeres Array.
   const [recordData, setRecordData] = useState([]);
   // Setzt die Basis-URL auf http://localhost:4000, zur Build-Time des Docker Containers
-  const base_url = process.env.REACT_APP_LOCAL_ADRESS;
+  const base_url = secrets.REACT_APP_SERVER_BASE_URL;
 //useEffect-Hook, der ausgeführt wird, sobald die Komponente gerendert wird.
  //Führt eine GET-Anfrage aus, um Benutzerdaten von der API abzurufen und setzt die Daten in den state.
   useEffect(() => {
